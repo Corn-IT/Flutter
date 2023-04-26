@@ -57,19 +57,29 @@ class button extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),
-            TextButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                backgroundColor: const MaterialStatePropertyAll(Colors.green),
-                shape: MaterialStatePropertyAll(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+            InkWell(
+              borderRadius: BorderRadius.circular(20),
+              onTap: () {},
+              child: Ink(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.green.shade300,
+                      Colors.green.shade500,
+                      Colors.green.shade600,
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
                   ),
                 ),
-              ),
-              child: const Text(
-                'Click Me',
-                style: TextStyle(color: Colors.black, fontSize: 16),
+                child: const Center(
+                  child: Text(
+                    'Click Me',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ),
             ),
             TextButton(

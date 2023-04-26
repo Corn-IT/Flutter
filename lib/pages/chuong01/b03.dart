@@ -51,13 +51,18 @@ class b03 extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
+                      flex: 6,
                       child: Container(
                         width: double.infinity,
                         height: 40,
-                        color: Colors.amber,
+                        decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                     const Expanded(
+                      flex: 4,
                       child: SizedBox(
                         width: double.infinity,
                         height: 40,
